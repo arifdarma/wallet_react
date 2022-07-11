@@ -23,8 +23,6 @@ function HomePages() {
       .then(([dataUser, dataTransaction]) => {
         setUser(dataUser);
         setTransaction(dataTransaction);
-      })
-      .finally(() => {
         setLoading(false);
       });
   }, []);
