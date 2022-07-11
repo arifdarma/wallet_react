@@ -1,4 +1,15 @@
-function HomeTable() {
+import Moment from 'moment';
+
+function HomeTable(props) {
+  const { transaction } = props;
+  const getBalance = (balance) => {
+    const formatter = new Intl.NumberFormat('id-ID', {
+      style: 'currency',
+      currency: 'IDR',
+    });
+    return formatter.format(balance).replace('Rp', '');
+  };
+
   return (
     <table className="table">
       <thead>
@@ -11,27 +22,17 @@ function HomeTable() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th>20:10 - 30 June 2022</th>
-          <th>DEBIT</th>
-          <th>310001001</th>
-          <th>Fore Coffe</th>
-          <th>-75.000,00</th>
-        </tr>
-        <tr>
-          <th>20:10 - 30 June 2022</th>
-          <th>CREDIT</th>
-          <th>1001</th>
-          <th>Top Up Bang Transfer</th>
-          <th>+1.000.000,00</th>
-        </tr>
-        <tr>
-          <th>20:10 - 30 June 2022</th>
-          <th>DEBIT</th>
-          <th>310001001</th>
-          <th>Fore Coffe</th>
-          <th>-75.000,00</th>
-        </tr>
+        {
+            transaction.map((transactionItem) => (
+              <tr key={transactionItem.id}>
+                <td>{Moment(transactionItem.date).format('H:mm - D MMMM YYYY')}</td>
+                <td>{transactionItem.transactionType}</td>
+                <td>{transactionItem.transactionType === 'CREDIT' ? transactionItem.sourceWalletID : transactionItem.destinationWalletID}</td>
+                <td>{transactionItem.description}</td>
+                <td>{transactionItem.transactionType === 'CREDIT' ? `+ ${getBalance(transactionItem.amount)}` : `- ${getBalance(transactionItem.amount)}`}</td>
+              </tr>
+            ))
+          }
       </tbody>
     </table>
   );
