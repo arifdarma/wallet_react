@@ -7,6 +7,12 @@ function HomePages() {
   const [transaction, setTransaction] = useState([]);
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
+  const [showRule, setShowRule] = useState({
+    show: 'last10',
+    sortBy: 'date',
+    ascDesc: 'desc',
+    value: '',
+  });
 
   const fetchUser = fetch('http://localhost:3008/wallets/9009090');
   const fetchTransaction = fetch('http://localhost:3008/wallets/9009090/transactions');
@@ -18,7 +24,9 @@ function HomePages() {
         setUser(dataUser);
         setTransaction(dataTransaction);
       })
-      .finally(() => setLoading(false));
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   return (
@@ -29,8 +37,11 @@ function HomePages() {
                 <div>
                   <HomeHeader user={user} />
                   <section>
-                    <HomeInput />
-                    <HomeTable transaction={transaction} />
+                    <HomeInput
+                      setShowRule={setShowRule}
+                      showRule={showRule}
+                    />
+                    <HomeTable transaction={transaction} showRule={showRule} />
                   </section>
                 </div>
               )
