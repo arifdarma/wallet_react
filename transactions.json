@@ -1,0 +1,182 @@
+[
+  {
+    "id": 20,
+    "transactionType": "DEBIT",
+    "amount": 7000,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 7010010,
+    "description": "Beli teh poci",
+    "date": "2022-07-08T16:59:52+07:00"
+  },
+  {
+    "id": 19,
+    "transactionType": "DEBIT",
+    "amount": 50000,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 6577160,
+    "description": "Bayar tilang",
+    "date": "2022-07-08T16:59:22+07:00"
+  },
+  {
+    "id": 18,
+    "transactionType": "DEBIT",
+    "amount": 10000,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 6577160,
+    "description": "Kantin Shopee",
+    "date": "2022-07-08T16:59:11+07:00"
+  },
+  {
+    "id": 17,
+    "transactionType": "DEBIT",
+    "amount": 8000,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 6577160,
+    "description": "Bayar parkir",
+    "date": "2022-07-05T16:58:54+07:00"
+  },
+  {
+    "id": 16,
+    "transactionType": "CREDIT",
+    "amount": 50000,
+    "sourceWalletID": 1001,
+    "destinationWalletID": 9009090,
+    "description": "Bank Transfer",
+    "date": "2022-07-04T16:58:31+07:00"
+  },
+  {
+    "id": 15,
+    "transactionType": "DEBIT",
+    "amount": 25000,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 7007070,
+    "description": "Beli odeng lawson",
+    "date": "2022-07-03T16:58:17+07:00"
+  },
+  {
+    "id": 14,
+    "transactionType": "DEBIT",
+    "amount": 99000,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 7007070,
+    "description": "Kuota HP Dedek Citayem",
+    "date": "2022-07-02T16:57:44+07:00"
+  },
+  {
+    "id": 13,
+    "transactionType": "DEBIT",
+    "amount": 100000,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 7007070,
+    "description": "Kuota HP Mama",
+    "date": "2022-07-01T16:57:29+07:00"
+  },
+  {
+    "id": 12,
+    "transactionType": "CREDIT",
+    "amount": 2000000,
+    "sourceWalletID": 1003,
+    "destinationWalletID": 9009090,
+    "description": "Cash",
+    "date": "2022-06-11T16:56:55+07:00"
+  },
+  {
+    "id": 11,
+    "transactionType": "CREDIT",
+    "amount": 900000,
+    "sourceWalletID": 1002,
+    "destinationWalletID": 9009090,
+    "description": "Visa Card",
+    "date": "2022-06-10T16:56:38+07:00"
+  },
+  {
+    "id": 10,
+    "transactionType": "DEBIT",
+    "amount": 2000,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 8007070,
+    "description": "Beli sosis",
+    "date": "2022-06-09T16:56:18+07:00"
+  },
+  {
+    "id": 9,
+    "transactionType": "DEBIT",
+    "amount": 5000,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 8007070,
+    "description": "Beli oreo",
+    "date": "2022-06-08T16:56:01+07:00"
+  },
+  {
+    "id": 8,
+    "transactionType": "DEBIT",
+    "amount": 1500,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 8007070,
+    "description": "Beli chiki",
+    "date": "2022-06-08T16:55:53+07:00"
+  },
+  {
+    "id": 7,
+    "transactionType": "DEBIT",
+    "amount": 1500,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 8007070,
+    "description": "Beli chuba",
+    "date": "2022-05-08T16:55:45+07:00"
+  },
+  {
+    "id": 6,
+    "transactionType": "DEBIT",
+    "amount": 1000,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 8007070,
+    "description": "Jajan permen",
+    "date": "2022-01-08T16:55:34+07:00"
+  },
+  {
+    "id": 5,
+    "transactionType": "DEBIT",
+    "amount": 1000,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 8008082,
+    "description": "Tip tambahan, suaranya merdu",
+    "date": "2022-01-08T16:54:43+07:00"
+  },
+  {
+    "id": 4,
+    "transactionType": "DEBIT",
+    "amount": 500,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 8008082,
+    "description": "Buat babang pengamen",
+    "date": "2022-01-08T16:54:15+07:00"
+  },
+  {
+    "id": 3,
+    "transactionType": "DEBIT",
+    "amount": 1000,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 8008081,
+    "description": "Bayar pak ogah cashless",
+    "date": "2021-07-01T16:53:29+07:00"
+  },
+  {
+    "id": 2,
+    "transactionType": "DEBIT",
+    "amount": 5000,
+    "sourceWalletID": 9009090,
+    "destinationWalletID": 8008080,
+    "description": "Beli cimol",
+    "date": "2021-07-01T16:53:00+07:00"
+  },
+  {
+    "id": 1,
+    "transactionType": "CREDIT",
+    "amount": 10000000,
+    "sourceWalletID": 1001,
+    "destinationWalletID": 9009090,
+    "description": "Bank Transfer",
+    "date": "2021-07-01T16:51:36+07:00"
+  }
+]
