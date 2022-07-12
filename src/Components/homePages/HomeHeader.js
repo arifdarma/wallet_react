@@ -23,12 +23,12 @@ function HomeHeader(props) {
             </p>
           </div>
           <div className="col-6">
-            <p>Balance:</p>
+            <p style={{ textAlign: 'right' }}>Balance:</p>
           </div>
         </div>
         <div className="row">
           <div className="col-12">
-            <h2>
+            <h2 style={{ textAlign: 'right' }}>
               IDR
               {getBalance(user.balance)}
             </h2>
