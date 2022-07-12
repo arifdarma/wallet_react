@@ -4,7 +4,6 @@ function ModalResponse(props) {
   const {
     status, modalHeader, dataModal, error,
   } = props;
-  console.log(status);
   return (
     <div>
       {
@@ -63,7 +62,7 @@ function ModalResponse(props) {
                                 <p>Description</p>
                               </div>
                               <div className="col-6" style={{ textAlign: 'right' }}>
-                                <p>{dataModal.description}</p>
+                                <p data-testid="descriptionModal">{dataModal.description}</p>
                               </div>
                             </div>
                           </div>
@@ -88,6 +87,7 @@ function ModalResponse(props) {
                       tabIndex="-1"
                       aria-labelledby="staticBackdropLabel"
                       aria-hidden="true"
+                      data-testid="modal-failed"
                     >
                       <div className="modal-dialog">
                         <div className="modal-content">

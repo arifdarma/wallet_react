@@ -33,7 +33,6 @@ function TransferPages() {
   };
 
   const handleSubmit = (event) => {
-    console.log('call');
     const postTransfer = 'http://localhost:3008/wallets/9009090/transactions';
     const transferObj = {
       transactionType: 'DEBIT',
@@ -50,6 +49,7 @@ function TransferPages() {
       body: JSON.stringify(transferObj),
     })
       .then((response) => {
+        console.log(response);
         if (!response.ok) {
           return response.text().then((text) => { throw new Error(text); });
         }
