@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 
 function ModalResponse(props) {
   const { status, modalHeader, dataModal } = props;
+  console.log(status);
   return (
     <div>
       {
@@ -21,7 +22,7 @@ function ModalResponse(props) {
                           <div className="modal-header" style={{ justifyContent: 'center' }}>
                             <h5 className="modal-title" id="staticBackdropLabel">{modalHeader.type}</h5>
                           </div>
-                          <h2 className="text-success">{modalHeader.message}</h2>
+                          <h2 className="text-success" style={{ textAlign: 'center' }}>{modalHeader.message}</h2>
                           <div className="modal-body" style={{ textAlign: 'left' }}>
                             <div className="row justify-content-between">
                               <div className="col-6">
