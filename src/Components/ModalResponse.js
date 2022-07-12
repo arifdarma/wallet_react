@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 
 function ModalResponse(props) {
-  const { status, modalHeader, dataModal } = props;
+  const {
+    status, modalHeader, dataModal, error,
+  } = props;
   console.log(status);
   return (
     <div>
@@ -95,7 +97,7 @@ function ModalResponse(props) {
                             </h5>
                           </div>
                           <div className="modal-body text-danger">
-                            Check Your Transaction Again
+                            {error}
                           </div>
                           <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">

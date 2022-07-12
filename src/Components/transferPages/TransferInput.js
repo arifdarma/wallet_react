@@ -2,7 +2,7 @@ import ModalResponse from '../ModalResponse';
 
 function TransferInput(props) {
   const {
-    handleChange, handleSubmit, status, dataModal, modalHeader, transfer,
+    handleChange, handleSubmit, status, dataModal, modalHeader, transfer, error,
   } = props;
   return (
     <div>
@@ -20,7 +20,7 @@ function TransferInput(props) {
           <div className="col-12 my-3">
             <label htmlFor="destination" className="col-6">
               <h5 style={{ textAlign: 'left' }}>To</h5>
-              <input className="form-control" id="destination" type="text" placeholder="0" value={transfer.destination} name="destination" onChange={handleChange} />
+              <input className="form-control" id="destination" type="number" placeholder="0" value={transfer.destination} name="destination" onChange={handleChange} />
             </label>
           </div>
           <div className="col-12 my-3">
@@ -38,7 +38,12 @@ function TransferInput(props) {
           <input type="submit" className="btn btn-primary form-control w-50" value="Transfer" />
         </form>
       </div>
-      <ModalResponse dataModal={dataModal} status={status} modalHeader={modalHeader} />
+      <ModalResponse
+        dataModal={dataModal}
+        status={status}
+        modalHeader={modalHeader}
+        error={error}
+      />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import TopupInput from '../Components/topupPages/TopupInput';
 
 function TopupPages() {
   const [status, setStatus] = useState(200);
+  const [error, setError] = useState('');
   const [dataModal, setDataModal] = useState({
     id: 2,
     transactionType: 'CREDIT',
@@ -51,10 +52,17 @@ function TopupPages() {
       body: JSON.stringify(topupObj),
     })
       .then((response) => {
+        if (!response.ok) {
+          return response.text().then((text) => { throw new Error(text); });
+        }
         setStatus(response.status);
         return response.json();
       })
-      .then((data) => setDataModal(data));
+      .then((data) => setDataModal(data))
+      .catch((err) => {
+        setError(JSON.parse(err.message).error);
+        setStatus(400);
+      });
   };
 
   return (
@@ -65,6 +73,7 @@ function TopupPages() {
         topup={topup}
         status={status}
         dataModal={dataModal}
+        error={error}
       />
     </div>
   );

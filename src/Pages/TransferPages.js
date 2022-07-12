@@ -4,6 +4,7 @@ import TransferInput from '../Components/transferPages/TransferInput';
 
 function TransferPages() {
   const [status, setStatus] = useState(200);
+  const [error, setError] = useState('');
   const [transfer, setTransfer] = useState({
     source: '9009090',
     destination: '',
@@ -26,6 +27,11 @@ function TransferPages() {
     });
   };
 
+  const modalHeader = {
+    type: 'Transfer',
+    message: 'Transfer Success',
+  };
+
   const handleSubmit = (event) => {
     console.log('call');
     const postTransfer = 'http://localhost:3008/wallets/9009090/transactions';
@@ -44,25 +50,20 @@ function TransferPages() {
       body: JSON.stringify(transferObj),
     })
       .then((response) => {
-        console.log(response);
         if (!response.ok) {
-          throw new Error(response.status);
+          return response.text().then((text) => { throw new Error(text); });
         }
         setStatus(response.status);
         return response.json();
       })
       .then((data) => setDataModal(data))
-      .catch(() => {
+      .catch((err) => {
+        setError(JSON.parse(err.message).error);
         setStatus(400);
       });
     const myModal = new Modal(document.getElementById('staticBackdrop'));
     myModal.show();
     event.preventDefault();
-  };
-
-  const modalHeader = {
-    type: 'Transfer',
-    message: 'Transfer Success',
   };
   return (
     <TransferInput
@@ -72,6 +73,7 @@ function TransferPages() {
       handleSubmit={handleSubmit}
       dataModal={dataModal}
       transfer={transfer}
+      error={error}
     />
   );
 }

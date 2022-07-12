@@ -2,7 +2,7 @@ import ModalResponse from '../ModalResponse';
 
 function TopupInput(props) {
   const {
-    submitTopup, topup, handleChange, status, dataModal,
+    submitTopup, topup, handleChange, status, dataModal, error,
   } = props;
   const modalHeader = {
     type: 'Top Up',
@@ -38,7 +38,12 @@ function TopupInput(props) {
           <input type="submit" className="btn btn-primary form-control w-50" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="Top Up" />
         </form>
       </div>
-      <ModalResponse dataModal={dataModal} status={status} modalHeader={modalHeader} />
+      <ModalResponse
+        dataModal={dataModal}
+        status={status}
+        modalHeader={modalHeader}
+        error={error}
+      />
     </>
   );
 }
