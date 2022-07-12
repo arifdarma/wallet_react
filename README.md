@@ -4,7 +4,8 @@
 
 DigiWallet is a wallet that allow you to Transfer to another account or Top Up to add your balance. You can also see you history 
 of transaction by last 10 transaction, this month, last month, this year or last year
-and sort it ascending or descending by date or by amount. And you can search transaction by keyword to find in description.
+and sort it ascending or descending by date or by amount. And you can search transaction by keyword to find in description. 
+And there is a games page to for you to play a games and add your balance.
 
 ## How to Setup
 
@@ -56,3 +57,11 @@ The command is used to mock the server and run it on port 3008.
 ### Topup Failed
 
 ![alt text](./src/img/Topup_failed.png)
+
+### Games
+
+![alt text](./src/img/Games.png)
+
+### Games Over
+
+![alt text](./src/img/Games_over.png)
