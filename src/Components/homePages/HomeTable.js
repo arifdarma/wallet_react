@@ -67,7 +67,9 @@ function HomeTable(props) {
                 <td>{transactionItem.transactionType}</td>
                 <td>{transactionItem.transactionType === 'CREDIT' ? transactionItem.sourceWalletID : transactionItem.destinationWalletID}</td>
                 <td>{transactionItem.description}</td>
-                <td>{transactionItem.transactionType === 'CREDIT' ? `+ ${getBalance(transactionItem.amount)}` : `- ${getBalance(transactionItem.amount)}`}</td>
+                <td className={(transactionItem.transactionType === 'CREDIT' ? 'text-success' : '')}>
+                  {transactionItem.transactionType === 'CREDIT' ? `+ ${getBalance(transactionItem.amount)}` : `- ${getBalance(transactionItem.amount)}`}
+                </td>
               </tr>
             ))
           }
